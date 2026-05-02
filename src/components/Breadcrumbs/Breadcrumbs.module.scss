@@ -1,0 +1,30 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 20px;  
+  font-size: 15px;
+  line-height: 1;
+  color: #6B7280;
+  font-weight: 400;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  a {
+    color: #8a96a8;
+    text-decoration: none;
+  }
+
+  strong {
+    color: #1B365D;
+    font-weight: 550;
+  }
+}
+
+.separator {
+  margin: 0 4px;
+}

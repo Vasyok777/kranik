@@ -1,0 +1,185 @@
+.page {
+  background: #ffffff;
+}
+
+.wrapper {
+  padding-top: 18px;
+  padding-bottom: 34px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 310px 1fr;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.content {
+  width: 100%;
+
+  h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+    line-height: 1.15;
+    font-weight: 600;
+    color: #1b365d;
+  }
+}
+
+.card {
+  width: 100%;
+  padding: 23px 28px;
+  margin-bottom: 12px;
+  background: #f7f9fc;
+  border-radius: 12px;
+
+  h2 {
+    margin: 0 0 16px;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #1b365d;
+  }
+
+  p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.42;
+    font-weight: 400;
+    color: #1b365d;
+  }
+
+  p + p {
+    margin-top: 7px;
+  }
+
+  ul {
+    margin: 12px 0 15px;
+    padding-left: 18px;
+  }
+
+  li {
+    margin-bottom: 4px;
+    font-size: 15px;
+    line-height: 1.35;
+    font-weight: 400;
+    color: #1b365d;
+  }
+}
+
+.advantagesCard {
+  padding: 30px;
+  padding-bottom: 40px;
+}
+
+.advantages {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 40px;
+  margin-top: 25px;
+}
+
+.advantageItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+
+  h3 {
+    margin: 0 0 5px;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #1b365d;
+  }
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 400;
+    color: #1b365d;
+  }
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img,
+  svg {
+    width: 50px;
+    height: 50px;
+    display: block;
+    object-fit: contain;
+  }
+}
+
+.faqCard {
+  padding: 23px 28px 25px;
+  margin-bottom: 0;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.faqBox {
+  width: 100%;
+  border-radius: 24px;
+  background: #e8eef7;
+  overflow: hidden;
+}
+
+.faqBoxOpen {
+  border-radius: 24px;
+}
+
+.faqItem {
+  width: 100%;
+  min-height: 42px;
+  padding: 0 18px 0 20px;
+  border: 0;
+  border-radius: 999px;
+  background: #e8eef7;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #1b365d;
+  cursor: pointer;
+  text-align: left;
+}
+
+.plus {
+  flex: 0 0 auto;
+  font-size: 26px;
+  line-height: 1;
+  font-weight: 400;
+  color: #1b365d;
+}
+
+.faqAnswer {
+  padding: 0 45px 18px 20px;
+  margin-top: -2px;
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.45;
+    font-weight: 400;
+    color: #1b365d;
+  }
+}
