@@ -1,0 +1,35 @@
+.brandsRow {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.brandItem {
+  width: 145px;
+  height: 70px;
+  border: 1px solid #E5E7EBf5;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  margin-bottom: 40px;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.brandItem:hover {
+  border-color: #1B365D;
+}
+
+.brandImage {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  transition: 0.25s ease;
+}
+
+.brandItem:hover .brandImage {
+  transform: scale(1.05);
+}

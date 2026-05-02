@@ -1,0 +1,313 @@
+export type Product = {
+  image: string;
+  badge: string;
+  title: string;
+  code: string;
+  oldPrice: string;
+  sale: string;
+  price: string;
+  rating?: string;
+  reviews?: string;
+  stock?: string;
+};
+
+export type BlogPost = {
+  image: string;
+  meta: string;
+  date: string;
+  title: string;
+  description: string;
+  author: string;
+};
+
+export const brands = [
+  'vitra.svg',
+  'roca.svg',
+  'oras.svg',
+  'kohler.svg',
+  'grohe.svg',
+  'hansgrohe.svg',
+  'teka.svg',
+  'blanco.svg',
+  'franke.svg',
+];
+
+export const categories = [
+  'Всі товари',
+  'Товари зі знижками',
+  'Сантехніка',
+  'Змішувачі',
+  'Душові системи',
+  'Водопостачання',
+  'Опалення',
+  'Очищення води',
+  'Кухня',
+];
+
+export const popularProducts: Product[] = [
+  {
+    image: 'prod-1.svg',
+    badge: 'Популярні товари',
+    title: 'Душова система KRANIK Rain Set ewsfewfewfe lkmdsekmde',
+    code: 'KR-101',
+    oldPrice: '11 500 ₴',
+    sale: '-2 000 ₴',
+    price: '9 500 ₴',
+    rating: '4.5',
+    reviews: '7',
+    stock: 'На складі м.Запоріжжя',
+  },
+  {
+    image: 'prod-2.svg',
+    badge: 'Популярні товари',
+    title: 'Душова система KRANIK Rain Set ewsfewfewfe lkmdsekmde',
+    code: 'KR-102',
+    oldPrice: '5 900 ₴',
+    sale: '-701 ₴',
+    price: '5 199 ₴',
+    rating: '4.5',
+    reviews: '7',
+    stock: 'На складі м.Запоріжжя',
+  },
+  {
+    image: 'prod-3.svg',
+    badge: 'Популярні товари',
+    title: 'Душова система KRANIK Rain Set ewsfewfewfe lkmdsekmde',
+    code: 'KR-103',
+    oldPrice: '7 200 ₴',
+    sale: '-701 ₴',
+    price: '6 499 ₴',
+    rating: '4.5',
+    reviews: '7',
+    stock: 'На складі м.Запоріжжя',
+  },
+  {
+    image: 'prod-4.svg',
+    badge: 'Популярні товари',
+    title: 'Душова система KRANIK Rain Set ewsfewfewfe lkmdsekmde',
+    code: 'KR-104',
+    oldPrice: '4 900 ₴',
+    sale: '-650 ₴',
+    price: '4 250 ₴',
+    rating: '4.5',
+    reviews: '7',
+    stock: 'На складі м.Запоріжжя',
+  },
+  {
+    image: 'prod-4.svg',
+    badge: 'Популярні товари',
+    title: 'Душова система KRANIK Rain Set',
+    code: 'KR-104',
+    oldPrice: '4 900 ₴',
+    sale: '-650 ₴',
+    price: '4 250 ₴',
+    rating: '4.5',
+    reviews: '7',
+    stock: 'На складі м.Запоріжжя',
+  },
+  {
+    image: 'prod-4.svg',
+    badge: 'Популярні товари',
+    title: 'Душова система KRANIK Rain Set',
+    code: 'KR-104',
+    oldPrice: '4 900 ₴',
+    sale: '-650 ₴',
+    price: '4 250 ₴',
+    rating: '4.5',
+    reviews: '7',
+    stock: 'На складі м.Запоріжжя',
+  },
+];
+
+export const saleProducts: Product[] = [
+  {
+    image: 'prod-1.svg',
+    badge: 'Популярні товари',
+    title: 'Душова система KRANIK Rain Set ewsfewfewfe lkmdsekmde',
+    code: 'KR-101',
+    oldPrice: '11 500 ₴',
+    sale: '-2 000 ₴',
+    price: '9 500 ₴',
+    rating: '4.5',
+    reviews: '7',
+    stock: 'На складі м.Запоріжжя',
+  },
+  {
+    image: 'prod-2.svg',
+    badge: 'Популярні товари',
+    title: 'Душова система KRANIK Rain Set ewsfewfewfe lkmdsekmde',
+    code: 'KR-102',
+    oldPrice: '5 900 ₴',
+    sale: '-701 ₴',
+    price: '5 199 ₴',
+    rating: '4.5',
+    reviews: '7',
+    stock: 'На складі м.Запоріжжя',
+  },
+  {
+    image: 'prod-3.svg',
+    badge: 'Популярні товари',
+    title: 'Душова система KRANIK Rain Set ewsfewfewfe lkmdsekmde',
+    code: 'KR-103',
+    oldPrice: '7 200 ₴',
+    sale: '-701 ₴',
+    price: '6 499 ₴',
+    rating: '4.5',
+    reviews: '7',
+    stock: 'На складі м.Запоріжжя',
+  },
+  {
+    image: 'prod-4.svg',
+    badge: 'Популярні товари',
+    title: 'Душова система KRANIK Rain Set ewsfewfewfe lkmdsekmde',
+    code: 'KR-104',
+    oldPrice: '4 900 ₴',
+    sale: '-650 ₴',
+    price: '4 250 ₴',
+    rating: '4.5',
+    reviews: '7',
+    stock: 'На складі м.Запоріжжя',
+  },
+  {
+    image: 'prod-4.svg',
+    badge: 'Популярні товари',
+    title: 'Душова система KRANIK Rain Set',
+    code: 'KR-104',
+    oldPrice: '4 900 ₴',
+    sale: '-650 ₴',
+    price: '4 250 ₴',
+    rating: '4.5',
+    reviews: '7',
+    stock: 'На складі м.Запоріжжя',
+  },
+  {
+    image: 'prod-4.svg',
+    badge: 'Популярні товари',
+    title: 'Душова система KRANIK Rain Set',
+    code: 'KR-104',
+    oldPrice: '4 900 ₴',
+    sale: '-650 ₴',
+    price: '4 250 ₴',
+    rating: '4.5',
+    reviews: '7',
+    stock: 'На складі м.Запоріжжя',
+  },
+];
+
+export const hitProducts: Product[] = [
+{
+    image: 'prod-1.svg',
+    badge: 'Популярні товари',
+    title: 'Душова система KRANIK Rain Set ewsfewfewfe lkmdsekmde',
+    code: 'KR-101',
+    oldPrice: '11 500 ₴',
+    sale: '-2 000 ₴',
+    price: '9 500 ₴',
+    rating: '4.5',
+    reviews: '7',
+    stock: 'На складі м.Запоріжжя',
+  },
+  {
+    image: 'prod-2.svg',
+    badge: 'Популярні товари',
+    title: 'Душова система KRANIK Rain Set ewsfewfewfe lkmdsekmde',
+    code: 'KR-102',
+    oldPrice: '5 900 ₴',
+    sale: '-701 ₴',
+    price: '5 199 ₴',
+    rating: '4.5',
+    reviews: '7',
+    stock: 'На складі м.Запоріжжя',
+  },
+  {
+    image: 'prod-3.svg',
+    badge: 'Популярні товари',
+    title: 'Душова система KRANIK Rain Set ewsfewfewfe lkmdsekmde',
+    code: 'KR-103',
+    oldPrice: '7 200 ₴',
+    sale: '-701 ₴',
+    price: '6 499 ₴',
+    rating: '4.5',
+    reviews: '7',
+    stock: 'На складі м.Запоріжжя',
+  },
+  {
+    image: 'prod-4.svg',
+    badge: 'Популярні товари',
+    title: 'Душова система KRANIK Rain Set ewsfewfewfe lkmdsekmde',
+    code: 'KR-104',
+    oldPrice: '4 900 ₴',
+    sale: '-650 ₴',
+    price: '4 250 ₴',
+    rating: '4.5',
+    reviews: '7',
+    stock: 'На складі м.Запоріжжя',
+  },
+  {
+    image: 'prod-4.svg',
+    badge: 'Популярні товари',
+    title: 'Душова система KRANIK Rain Set',
+    code: 'KR-104',
+    oldPrice: '4 900 ₴',
+    sale: '-650 ₴',
+    price: '4 250 ₴',
+    rating: '4.5',
+    reviews: '7',
+    stock: 'На складі м.Запоріжжя',
+  },
+  {
+    image: 'prod-4.svg',
+    badge: 'Популярні товари',
+    title: 'Душова система KRANIK Rain Set',
+    code: 'KR-104',
+    oldPrice: '4 900 ₴',
+    sale: '-650 ₴',
+    price: '4 250 ₴',
+    rating: '4.5',
+    reviews: '7',
+    stock: 'На складі м.Запоріжжя',
+  },
+];
+
+export const blogPosts = [
+  {
+    title: 'Як вибрати змішувач для ванної кімнати для вас любих',
+    description: 'Пояснюємо, як правильно підібрати змішувачлололто ошошщошщошщошщ ощоощшощшошщ ошщошщощшшощ шоошщощшшощ ошщощшошщошощ',
+    image: 'blog1.jpg',
+    meta: '4–5 хв',
+    date: '02.02.2026',
+    author: 'Іван',
+    likes: 2,
+    comments: 2,
+  },
+  {
+    title: 'Як вибрати змішувач для ванної кімнати для вас любих',
+    description: 'Пояснюємо, як правильно підібрати змішувачлололто ошошщошщошщошщ ощоощшощшошщ ошщошщощшшощ шоошщощшшощ ошщощшошщошощ',
+    image: 'blog1.jpg',
+    meta: '4–5 хв',
+    date: '02.02.2026',
+    author: 'Іван',
+    likes: 2,
+    comments: 2,
+  },
+  {
+    title: 'Як вибрати змішувач для ванної кімнати для вас любих',
+    description: 'Пояснюємо, як правильно підібрати змішувачлололто ошошщошщошщошщ ощоощшощшошщ ошщошщощшшощ шоошщощшшощ ошщощшошщошощ',
+    image: 'blog1.jpg',
+    meta: '4–5 хв',
+    date: '02.02.2026',
+    author: 'Іван',
+    likes: 2,
+    comments: 2,
+  },
+  {
+    title: 'Як вибрати змішувач для ванної кімнати для вас любих',
+    description: 'Пояснюємо, як правильно підібрати змішувачлололто ошошщошщошщошщ ощоощшощшошщ ошщошщощшшощ шоошщощшшощ ошщощшошщошощ',
+    image: 'blog1.jpg',
+    meta: '4–5 хв',
+    date: '02.02.2026',
+    author: 'Іван',
+    likes: 2,
+    comments: 2,
+  },
+];

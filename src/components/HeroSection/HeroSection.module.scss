@@ -1,0 +1,188 @@
+.heroSection {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+/* ВАЖЛИВО:
+   висота лівого меню = висота банера
+   без dots */
+.categoriesPanel {
+  height: 400px;
+  box-sizing: border-box;
+  padding-right: 8px;
+  overflow: hidden;
+}
+
+.categoriesScroll {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 10px;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #1b365d #eef1f5;
+}
+
+.categoriesScroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.categoriesScroll::-webkit-scrollbar-track {
+  background: #eef1f5;
+  border-radius: 20px;
+}
+
+.categoriesScroll::-webkit-scrollbar-thumb {
+  background: #1b365d;
+  border-radius: 20px;
+}
+
+.categoriesList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.categoryItem {
+  margin-bottom: 6px;
+}
+
+.categoryItem:last-child {
+  margin-bottom: 0;
+}
+
+.categoryLink {
+  width: 100%;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 16px 0 12px;
+  border-radius: 999px;
+  text-decoration: none;
+  box-sizing: border-box;
+  background: transparent;
+  transition: background 0.2s ease;
+}
+
+.hovered {
+  background: #eef1f5;
+}
+
+.iconWrap {
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.categoryIcon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  display: block;
+}
+
+.categoryText {
+  color: #1b3d6d;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+/* ПРАВИЙ БЛОК = банер + dots */
+.heroBannerWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.heroBanner {
+  position: relative;
+}
+
+.heroContent {
+  position: relative;
+  display: block;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 16px;
+  text-decoration: none;
+  background: #f3f4f8;
+}
+
+.heroImageWrap {
+  position: absolute;
+  inset: 0;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.heroArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: #f4f6fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 3;
+  box-shadow: 0 4px 14px rgba(21, 52, 104, 0.08);
+}
+
+.heroArrow span {
+  color: #47618f;
+  font-size: 22px;
+  line-height: 1;
+  display: block;
+  margin-top: -2px;
+}
+
+.left {
+  left: 14px;
+}
+
+.right {
+  right: 14px;
+}
+
+/* dots живуть ОКРЕМО під банером */
+.heroDots {
+  margin-top: 12px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border: none;
+  border-radius: 50%;
+  background: #9d9d9d;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.activeDot {
+  background: #1653a5;
+}

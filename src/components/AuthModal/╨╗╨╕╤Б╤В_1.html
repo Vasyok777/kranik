@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дякуємо за замовлення!</title>
+    <style>
+        /* Імпорт шрифтів */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Cormorant+Garamond:wght@600&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #E9F3D8;
+            font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #E9F3D8;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .header-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 32px;
+            color: #063A2F;
+            text-align: center;
+            font-weight: 700;
+            margin: 20px 0;
+        }
+
+        .status-button {
+            background-color: #3A733E;
+            color: #ffffff;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 50px;
+            display: inline-block;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .order-info-table {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #063A2F;
+        }
+
+        .order-info-table td {
+            padding: 5px 0;
+        }
+
+        .product-table {
+            margin-top: 30px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .product-table th {
+            background-color: #3A733E;
+            color: #ffffff;
+            padding: 10px;
+            text-align: left;
+            font-size: 12px;
+        }
+
+        .product-row td {
+            padding: 15px 10px;
+            border-bottom: 1px solid rgba(6, 58, 47, 0.1);
+            vertical-align: middle;
+            font-size: 13px;
+            color: #063A2F;
+        }
+
+        .cta-box {
+            background-color: #063A2F;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            color: #ffffff;
+            margin-top: 30px;
+        }
+
+        .footer {
+            background-color: #063A2F;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .social-link {
+            margin: 0 10px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <table class="container" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+            <td align="center" style="padding-top: 40px;">
+                <div style="font-weight: bold; color: #063A2F; letter-spacing: 2px;">FJORDSAM</div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="content" align="center">
+                <h1 class="header-title">Дякуємо за замовлення!</h1>
+                <p style="color: #063A2F; font-size: 14px; line-height: 1.5; margin-bottom: 25px;">
+                    Ми отримали ваше замовлення та вже готуємо його до відправки. Якщо виникнуть запитання щодо наявності або оплати, ми обов’язково зв’яжемося з вами.
+                </p>
+                <a href="#" class="status-button">Очікуйте сповіщення від служби доставки</a>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="padding: 0 30px;">
+                <table class="order-info-table">
+                    <tr>
+                        <td>Номер замовлення:</td>
+                        <td align="right"><strong>№39210</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Створено:</td>
+                        <td align="right">03.03.2026, 09:28</td>
+                    </tr>
+                    <tr>
+                        <td>Отримувач:</td>
+                        <td align="right">erfer regere</td>
+                    </tr>
+                    <tr>
+                        <td>Телефон:</td>
+                        <td align="right">+380 (99) 010-78-27</td>
+                    </tr>
+                    <tr>
+                        <td>Місто:</td>
+                        <td align="right">Київська</td>
+                    </tr>
+                    <tr>
+                        <td>Спосіб доставки:</td>
+                        <td align="right">Відділення Нової Пошти</td>
+                    </tr>
+                    <tr>
+                        <td>До сплати:</td>
+                        <td align="right"><strong>4774 грн</strong></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="padding: 0 30px;">
+                <table class="product-table">
+                    <thead>
+                        <tr>
+                            <th style="border-top-left-radius: 12px;">Товар</th>
+                            <th>Ціна</th>
+                            <th>Кіл-ть</th>
+                            <th style="border-top-right-radius: 12px;">Разом</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="product-row">
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td><img src="https://via.placeholder.com/40" width="40" style="display:block; border-radius: 4px;"></td>
+                                        <td style="padding-left: 10px; font-weight: 600;">Kiki Health Екстракт Кордіцепса, 60 капсул</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>999</td>
+                            <td>x1</td>
+                            <td>999</td>
+                        </tr>
+                        </tbody>
+                </table>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="padding: 0 30px;">
+                <div class="cta-box">
+                    <h3 style="margin-top: 0;">Хочете переглянути своє замовлення?</h3>
+                    <p style="font-size: 13px; opacity: 0.8;">Увійдіть до особистого кабінету, щоб переглянути деталі замовлення та історію покупок.</p>
+                    <a href="#" style="background-color: white; color: #063A2F; padding: 12px 25px; text-decoration: none; border-radius: 50px; display: inline-block; font-weight: 600; margin-top: 15px;">Перейти в особистий кабінет</a>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td align="center" style="padding: 40px 0; color: #063A2F; font-weight: 600;">
+                Бережіть себе та будьте здорові!
+            </td>
+        </tr>
+
+        <tr>
+            <td class="footer">
+                <table width="100%">
+                    <tr>
+                        <td align="left" style="font-weight: 600;">+38 (093) 158-75-51</td>
+                        <td align="center">
+                            <a href="#" class="social-link"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" width="20" alt="IG"></a>
+                            <a href="#" class="social-link"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968841.png" width="20" alt="TG"></a>
+                        </td>
+                        <td align="right">fjordsam.com</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

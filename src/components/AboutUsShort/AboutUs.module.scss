@@ -1,0 +1,79 @@
+.aboutUs {
+  padding: 40px 0;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #dfe5ec;
+  border-radius: 28px;
+  padding: 42px 44px 42px;
+  box-sizing: border-box;
+}
+
+.title {
+  margin: 0 0 22px;
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #23406a;
+}
+
+.textWrapper {
+  max-height: 155px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.open {
+  max-height: 1000px;
+}
+
+.text {
+  margin: 0 0 18px;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 400;
+  color: #7f8898;
+}
+
+.text:last-child {
+  margin-bottom: 0;
+}
+
+.toggleButton {
+  margin-top: 28px;
+  min-width: 242px;
+  height: 52px;
+  padding: 0 28px;
+  border: none;
+  border-radius: 999px;
+  background: #39b85a;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.toggleButton:hover {
+  background: #31aa50;
+  box-shadow: 0 6px 18px rgba(57, 184, 90, 0.18);
+}
+
+.arrow {
+  font-size: 18px;
+  line-height: 1;
+  display: inline-block;
+  transform: rotate(0deg);
+  transition: transform 0.25s ease;
+  margin-top: -2px;
+}
+
+.arrowOpen {
+  transform: rotate(180deg);
+}

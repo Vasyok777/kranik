@@ -1,0 +1,221 @@
+.section {
+  margin-top: 0;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.heading h2 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #23406a;
+}
+
+.moreLink {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  color: #a60000;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid #e7edf5;
+  border-radius: 16px;
+  padding: 14px;
+  background: #fff;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    border-color: #cfd8e6;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  }
+}
+
+.image {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  height: 160px;
+  margin: 0 auto 12px;
+  border-radius: 12px;
+  overflow: hidden;
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #7d8ba3;
+  font-size: 15px;
+  line-height: 1;
+}
+
+.date {
+  color: #7d8ba3;
+  font-size: 15px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.title {
+  margin: 0 0 8px;
+  color: #23406a;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.35;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+
+  min-height: calc(1.35em * 2);
+  max-height: calc(1.35em * 2);
+}
+
+.description {
+  margin: 0 0 14px;
+  color: #6b7b92;
+  font-size: 14px;
+  line-height: 1.5;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+
+  min-height: calc(1.5em * 2);
+  max-height: calc(1.5em * 2);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #e6edf6;
+  color: #23406a;
+  font-weight: 600;
+}
+
+.reactions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.reaction {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #6b7b92;
+  font-size: 13px;
+}
+
+.wrapper {
+  position: relative;
+}
+
+/* СЛАЙДЕР */
+.slider {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+/* щоб не було скролбару */
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* КАРТКА */
+.card {
+  min-width: 300px;
+}
+
+/* СТРІЛКИ — 1в1 як Hero */
+.blogArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: #f4f6fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 3;
+  box-shadow: 0 4px 14px rgba(21, 52, 104, 0.08);
+}
+
+.blogArrow span {
+  color: #47618f;
+  font-size: 22px;
+  line-height: 1;
+  margin-top: -2px;
+}
+
+/* позиції */
+.left {
+  left: -20px;
+}
+
+.right {
+  right: -20px;
+}

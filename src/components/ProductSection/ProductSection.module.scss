@@ -1,0 +1,101 @@
+.section {
+  width: 100%;
+  overflow: visible;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 20px;
+
+  h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: #1b365d;
+    line-height: 1.1;
+  }
+
+  a {
+    color: #A60000;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    margin-top: 5px;
+  }
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.grid {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.grid::-webkit-scrollbar {
+  display: none;
+}
+
+.grid > * {
+  flex: 0 0 272px;
+  width: 272px;
+  min-width: 272px;
+  max-width: 272px;
+}
+
+/* 🔥 СТРІЛКИ */
+.sliderArrow {
+  position: absolute;
+  top: 218px;
+  transform: translateY(-50%);
+  z-index: 5;
+
+  width: 38px;          /* було 46 */
+  height: 38px;         /* було 46 */
+  border: none;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  box-shadow: 0 4px 14px rgba(27, 54, 93, 0.08);
+  color: #8ea0bf;
+
+  font-size: 24px;      /* було 34 */
+  line-height: 1;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+
+  padding: 0;
+}
+
+.sliderArrow:hover {
+  background: rgba(255, 255, 255, 0.95);
+  color: #1b365d;
+}
+
+/* ✔️ нормальна позиція (не обрізає) */
+.left {
+  left: -20px;
+}
+
+.right {
+  right: -20px;
+}
