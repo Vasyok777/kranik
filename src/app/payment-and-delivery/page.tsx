@@ -3,17 +3,8 @@
 import { useState } from 'react';
 import Header from '@/src/components/Header/Header';
 import Footer from '@/src/components/Footer/Footer';
+import InfoSidebar from '@/src/components/InfoSidebar/InfoSidebar';
 import styles from './page.module.scss';
-
-const menuItems = [
-  'Про компанію',
-  'Контакти',
-  'Оплата і доставка',
-  'Гарантія та сервіс',
-  'Повернення та обмін',
-  'Кредит і оплата частинами',
-  'Поширені запитання',
-];
 
 const faqItems = [
   {
@@ -67,19 +58,7 @@ export default function PaymentAndDeliveryPage() {
         </div>
 
         <div className={styles.layout}>
-          <aside className={styles.sidebar}>
-            {menuItems.map((item) => (
-              <div
-                key={item}
-                className={`${styles.sidebarItem} ${
-                  item === 'Оплата і доставка' ? styles.active : ''
-                }`}
-              >
-                <span>{item}</span>
-                <span className={styles.arrow}>›</span>
-              </div>
-            ))}
-          </aside>
+          <InfoSidebar active="Оплата та доставка" />
 
           <div className={styles.content}>
             <h1>Оплата і доставка</h1>
@@ -142,7 +121,7 @@ export default function PaymentAndDeliveryPage() {
               <div className={styles.advantages}>
                 <div className={styles.advantageItem}>
                   <div className={styles.icon}>
-                    <img src="/images/icons/convenient-payment.svg" alt="icon" />
+                    <img src="/images/icons/convenient-payment.svg" alt="" />
                   </div>
                   <div>
                     <h3>Зручна оплата</h3>
@@ -156,7 +135,7 @@ export default function PaymentAndDeliveryPage() {
 
                 <div className={styles.advantageItem}>
                   <div className={styles.icon}>
-                    <img src="/images/icons/pickup.svg" alt="icon" />
+                    <img src="/images/icons/pickup.svg" alt="" />
                   </div>
                   <div>
                     <h3>Самовивіз</h3>
@@ -170,7 +149,7 @@ export default function PaymentAndDeliveryPage() {
 
                 <div className={styles.advantageItem}>
                   <div className={styles.icon}>
-                    <img src="/images/icons/fast-delivery.svg" alt="icon" />
+                    <img src="/images/icons/fast-delivery.svg" alt="" />
                   </div>
                   <div>
                     <h3>Швидка доставка</h3>
@@ -183,7 +162,7 @@ export default function PaymentAndDeliveryPage() {
 
                 <div className={styles.advantageItem}>
                   <div className={styles.icon}>
-                    <img src="/images/icons/customer-support.svg" alt="icon" />
+                    <img src="/images/icons/customer-support.svg" alt="" />
                   </div>
                   <div>
                     <h3>Підтримка клієнтів</h3>
@@ -197,7 +176,7 @@ export default function PaymentAndDeliveryPage() {
 
                 <div className={styles.advantageItem}>
                   <div className={styles.icon}>
-                    <img src="/images/icons/reliable-packaging.svg" alt="icon" />
+                    <img src="/images/icons/reliable-packaging.svg" alt="" />
                   </div>
                   <div>
                     <h3>Надійне пакування</h3>
@@ -211,7 +190,7 @@ export default function PaymentAndDeliveryPage() {
 
                 <div className={styles.advantageItem}>
                   <div className={styles.icon}>
-                    <img src="/images/icons/operational-processing.svg" alt="icon" />
+                    <img src="/images/icons/operational-processing.svg" alt="" />
                   </div>
                   <div>
                     <h3>Оперативна обробка</h3>
