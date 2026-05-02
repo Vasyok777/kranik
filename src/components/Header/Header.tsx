@@ -170,7 +170,7 @@ export default function Header({
               <nav className={styles.topLinks}>
                 <Link href="#" className={styles.topLink}>Про компанію</Link>
                 <Link href="#" className={styles.topLink}>Контакти</Link>
-                <Link href="#" className={styles.topLink}>Оплата і доставка</Link>
+                <Link href="/payment-and-delivery" className={styles.topLink}>Оплата і доставка</Link>
                 <Link href="#" className={styles.topLink}>Послуги</Link>
                 <Link href="#" className={styles.topLink}>Бренди</Link>
                 <Link href="#" className={styles.topLink}>Блог</Link>
@@ -425,7 +425,7 @@ export default function Header({
               <Link href="#" className={styles.mobileMenuLink} onClick={closeMobileMenu}>
                 Контакти
               </Link>
-              <Link href="#" className={styles.mobileMenuLink} onClick={closeMobileMenu}>
+              <Link href="/payment-and-delivery" className={styles.mobileMenuLink} onClick={closeMobileMenu}>
                 Оплата і доставка
               </Link>
               <Link href="#" className={styles.mobileMenuLink} onClick={closeMobileMenu}>
