@@ -1,6 +1,7 @@
 import Header from '@/src/components/Header/Header';
 import Footer from '@/src/components/Footer/Footer';
 import InfoSidebar from '@/src/components/InfoSidebar/InfoSidebar';
+import Breadcrumbs from '@/src/components/Breadcrumbs/Breadcrumbs';
 import styles from './page.module.scss';
 
 const advantages = [
@@ -60,11 +61,12 @@ export default function WarrantyAndServicePage() {
       <Header />
 
       <section className={`container ${styles.wrapper}`}>
-        <div className={styles.breadcrumbs}>
-          <span>Головна</span>
-          <span>›</span>
-          <strong>Гарантія та сервіс</strong>
-        </div>
+        <Breadcrumbs
+          items={[
+            { label: 'Головна', href: '/' },
+            { label: 'Гарантія та сервіс' },
+          ]}
+        />
 
         <div className={styles.layout}>
           <InfoSidebar active="Гарантія та сервіс" />

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Header from '@/src/components/Header/Header';
 import Footer from '@/src/components/Footer/Footer';
 import InfoSidebar from '@/src/components/InfoSidebar/InfoSidebar';
+import Breadcrumbs from '@/src/components/Breadcrumbs/Breadcrumbs';
 import styles from './page.module.scss';
 
 const faqItems = [
@@ -51,11 +52,12 @@ export default function PaymentAndDeliveryPage() {
       <Header />
 
       <section className={`container ${styles.wrapper}`}>
-        <div className={styles.breadcrumbs}>
-          <span>Головна</span>
-          <span>›</span>
-          <strong>Оплата та доставка</strong>
-        </div>
+        <Breadcrumbs
+          items={[
+            { label: 'Головна', href: '/' },
+            { label: 'Оплата та доставка' },
+          ]}
+        />
 
         <div className={styles.layout}>
           <InfoSidebar active="Оплата та доставка" />

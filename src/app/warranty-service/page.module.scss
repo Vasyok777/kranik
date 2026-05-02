@@ -4,22 +4,7 @@
 
 .wrapper {
   padding-top: 18px;
-  padding-bottom: 10px;
-}
-
-.breadcrumbs {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  margin-bottom: 14px;
-  font-size: 12px;
-  line-height: 1;
-  color: #8a96a8;
-
-  strong {
-    color: #1b365d;
-    font-weight: 700;
-  }
+  padding-bottom: 40px;
 }
 
 .layout {
@@ -44,7 +29,7 @@
 .card {
   width: 100%;
   padding: 23px 28px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   background: #f7f9fc;
   border-radius: 12px;
 
@@ -67,6 +52,10 @@
   p + p {
     margin-top: 7px;
   }
+}
+
+.card:last-child {
+  margin-bottom: 0;
 }
 
 .advantagesCard {

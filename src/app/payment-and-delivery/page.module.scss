@@ -7,21 +7,6 @@
   padding-bottom: 34px;
 }
 
-.breadcrumbs {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  margin-bottom: 14px;
-  font-size: 12px;
-  line-height: 1;
-  color: #8a96a8;
-
-  strong {
-    color: #1b365d;
-    font-weight: 700;
-  }
-}
-
 .layout {
   display: grid;
   grid-template-columns: 310px 1fr;
