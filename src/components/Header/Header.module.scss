@@ -1,6 +1,6 @@
 .header {
   position: sticky;
-  top: 0;
+  top: 28px;
   width: 100%;
   background: #ffffff;
   font-family: 'Inter', sans-serif;
@@ -22,6 +22,9 @@
 }
 
 .shippingBar {
+  position: sticky;
+  top: 0;
+  z-index: 61;
   height: 28px;
   display: flex;
   align-items: center;
@@ -619,6 +622,10 @@
 
 /* MOBILE */
 @media (max-width: 768px) {
+  .header {
+    top: 32px;
+  }
+
   .shippingBar {
     height: 32px;
     padding: 0 12px;

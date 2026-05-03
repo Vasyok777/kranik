@@ -161,6 +161,8 @@ export default function Header({
         />
       )}
 
+      <div className={styles.shippingBar}>Безкоштовна доставка від 1000 грн</div>
+
       <div className={styles.headerTopPart}>
         <div className={styles.topNavWrapper}>
             <div className={`container ${styles.topNav}`}>
@@ -245,8 +247,6 @@ export default function Header({
         </div>
 
       <header className={`${styles.header} ${isScrolled ? styles.headerScrolled : ''}`}>
-        <div className={styles.shippingBar}>Безкоштовна доставка від 1000 грн</div>
-
         <div className={styles.mainWrapper}>
           <div className={`container ${styles.main}`}>
             <button
