@@ -2,12 +2,13 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { blogPosts } from '@/src/data/store';
 import styles from './BlogSection.module.scss';
 
 export default function BlogSection() {
   const sliderRef = useRef<HTMLDivElement>(null);
+  const [activeSlide, setActiveSlide] = useState(0);
 
   const scrollLeft = () => {
     sliderRef.current?.scrollBy({ left: -320, behavior: 'smooth' });
@@ -15,6 +16,20 @@ export default function BlogSection() {
 
   const scrollRight = () => {
     sliderRef.current?.scrollBy({ left: 320, behavior: 'smooth' });
+  };
+
+  const handleScroll = () => {
+    if (!sliderRef.current) return;
+    const { scrollLeft, offsetWidth } = sliderRef.current;
+    setActiveSlide(Math.round(scrollLeft / offsetWidth));
+  };
+
+  const scrollToSlide = (index: number) => {
+    if (!sliderRef.current) return;
+    sliderRef.current.scrollTo({
+      left: index * sliderRef.current.offsetWidth,
+      behavior: 'smooth',
+    });
   };
 
   return (
@@ -29,8 +44,6 @@ export default function BlogSection() {
       </div>
 
       <div className={styles.wrapper}>
-        
-        {/* ЛІВА */}
         <button
           type="button"
           className={`${styles.blogArrow} ${styles.left}`}
@@ -39,11 +52,9 @@ export default function BlogSection() {
           <span>‹</span>
         </button>
 
-        {/* КАРТКИ */}
-        <div className={styles.slider} ref={sliderRef}>
-          {blogPosts.map((post) => (
-            <Link href="#" className={styles.card} key={post.title}>
-              
+        <div className={styles.slider} ref={sliderRef} onScroll={handleScroll}>
+          {blogPosts.map((post, i) => (
+            <Link href="#" className={styles.card} key={`${post.title}-${i}`}>
               <div className={styles.image}>
                 <Image
                   src={`/assets/blog/${post.image}`}
@@ -58,7 +69,6 @@ export default function BlogSection() {
                   <Image src="/images/icons/time.svg" alt="" width={18} height={18} />
                   <span>{post.meta}</span>
                 </div>
-
                 <span className={styles.date}>{post.date}</span>
               </div>
 
@@ -76,19 +86,16 @@ export default function BlogSection() {
                     <Image src="/images/icons/like.svg" alt="" width={30} height={30} />
                     <span>{post.likes}</span>
                   </div>
-
                   <div className={styles.reaction}>
                     <Image src="/images/icons/dislike.svg" alt="" width={30} height={30} />
                     <span>{post.comments}</span>
                   </div>
                 </div>
               </div>
-
             </Link>
           ))}
         </div>
 
-        {/* ПРАВА */}
         <button
           type="button"
           className={`${styles.blogArrow} ${styles.right}`}
@@ -96,7 +103,18 @@ export default function BlogSection() {
         >
           <span>›</span>
         </button>
+      </div>
 
+      <div className={styles.dots}>
+        {blogPosts.map((_, index) => (
+          <button
+            key={index}
+            type="button"
+            className={`${styles.dot} ${index === activeSlide ? styles.activeDot : ''}`}
+            onClick={() => scrollToSlide(index)}
+            aria-label={`Перейти до поста ${index + 1}`}
+          />
+        ))}
       </div>
     </section>
   );

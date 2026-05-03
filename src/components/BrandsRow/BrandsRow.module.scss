@@ -33,3 +33,15 @@
 .brandItem:hover .brandImage {
   transform: scale(1.05);
 }
+
+@media (max-width: 1200px) {
+  .brandsRow {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .brandsRow {
+    display: none;
+  }
+}

@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import styles from './HeroSection.module.scss';
 
 const categories = [
@@ -74,6 +74,13 @@ export default function HeroSection() {
   const [activeBanner, setActiveBanner] = useState(0);
 
   const currentBanner = useMemo(() => banners[activeBanner], [activeBanner]);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveBanner(prev => (prev === banners.length - 1 ? 0 : prev + 1));
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
 
   const goPrev = () => {
     setActiveBanner((prev) => (prev === 0 ? banners.length - 1 : prev - 1));
@@ -167,6 +174,10 @@ export default function HeroSection() {
             />
           ))}
         </div>
+
+        <button type="button" className={styles.mobileCatalogBar}>
+          ≡ Каталог товарів ↓
+        </button>
       </div>
     </section>
   );

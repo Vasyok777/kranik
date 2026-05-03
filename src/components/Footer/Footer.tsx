@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={`container ${styles.grid}`}>
         <div>
-          <Image src="/assets/logo.png" alt="Kranik" width={104} height={36} />
+          <Image src="/assets/logo.svg" alt="Kranik" width={104} height={36} />
           <p className={styles.description}>
             Інтернет-магазин якісної сантехніки для вашого дому. Ми пропонуємо сучасні рішення
             для ванної кімнати та кухні: змішувачі, бойлери, душові системи, унітази та аксесуари.

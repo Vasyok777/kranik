@@ -174,16 +174,20 @@
   gap: 16px;
   overflow-x: auto;
   scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 
-/* щоб не було скролбару */
 .slider::-webkit-scrollbar {
   display: none;
 }
 
-/* КАРТКА */
 .card {
   min-width: 300px;
+}
+
+/* DOTS — тільки мобільний */
+.dots {
+  display: none;
 }
 
 /* СТРІЛКИ — 1в1 як Hero */
@@ -218,4 +222,102 @@
 
 .right {
   right: -20px;
+}
+
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .heading h2 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    margin-bottom: 28px;
+  }
+
+  .heading {
+    justify-content: space-between;
+    gap: 0;
+    margin-bottom: 12px;
+  }
+
+  .heading h2 {
+    color: #1b365d;
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .moreLink {
+    color: #a60000;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blogArrow {
+    display: none;
+  }
+
+  .slider {
+    scroll-snap-type: x mandatory;
+    gap: 0;
+  }
+
+  .card {
+    flex: 0 0 100%;
+    min-width: 100%;
+    scroll-snap-align: start;
+    border-radius: 16px;
+  }
+
+  .image {
+    max-width: 100%;
+    height: 200px;
+  }
+
+  .title {
+    font-size: 16px;
+    min-height: auto;
+    max-height: none;
+  }
+
+  .dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin-top: 16px;
+    height: 8px;
+  }
+
+  .dot {
+    width: 6px;
+    height: 6px;
+    border: none;
+    border-radius: 50%;
+    background: #d9d9d9;
+    padding: 0;
+    cursor: pointer;
+    transition: background 0.2s ease, width 0.2s ease, height 0.2s ease;
+  }
+
+  .activeDot {
+    width: 8px;
+    height: 8px;
+    background: #0f488f;
+  }
 }

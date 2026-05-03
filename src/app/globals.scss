@@ -32,10 +32,18 @@ img {
   max-width: 1720px;
   margin: 0 auto;
   padding: 0 130px;
+
+  @media (max-width: 1200px) {
+    padding: 0 40px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 16px;
+  }
 }
 
 .page-root {
-  min-width: 1160px;
+  min-width: 0;
 }
 
 .section-title {
