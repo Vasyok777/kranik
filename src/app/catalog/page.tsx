@@ -1,5 +1,5 @@
-import Header from '@/components/Header/Header';
-import Footer from '@/components/Footer/Footer';
+import Header from '@/src/components/Header/Header';
+import Footer from '@/src/components/Footer/Footer';
 import styles from './page.module.scss';
 
 export default function CatalogPage() {
