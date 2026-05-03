@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import styles from './Header.module.scss';
+import { PHONE, PHONE_HREF } from '@/src/data/constants';
 
 type HeaderProps = {
   onOpenLogin?: () => void;
@@ -202,8 +203,8 @@ export default function Header({
                   <span>м.Запоріжжя</span>
                 </button>
 
-                <a href="tel:0800337049" className={styles.phone}>
-                  0 800 33 70 49
+                <a href={PHONE_HREF} className={styles.phone}>
+                  {PHONE}
                 </a>
 
                 <div
@@ -440,8 +441,8 @@ export default function Header({
             </nav>
 
             <div className={styles.mobileMenuBottom}>
-              <a href="tel:0800337049" className={styles.mobilePhone}>
-                0 800 33 70 49
+              <a href={PHONE_HREF} className={styles.mobilePhone}>
+                {PHONE}
               </a>
 
               <button type="button" className={styles.mobileLocationButton}>

@@ -1,3 +1,27 @@
+/* ── CSS Variables ── */
+:root {
+  /* Primary */
+  --color-primary: #0f488f;
+  --color-primary-dark: #0d3a72;
+  --color-primary-light: #1b365d;
+
+  /* Text */
+  --color-text: #23406a;
+  --color-text-muted: #6b7b92;
+  --color-text-light: #7d8ba3;
+
+  /* UI */
+  --color-white: #ffffff;
+  --color-bg: #f6f9fc;
+  --color-border: #e5e7eb;
+  --color-success: #39b85a;
+  --color-footer-divider: #265fa6;
+
+  /* Spacing */
+  --section-py: 60px;
+  --section-py-mobile: 40px;
+}
+
 /* ── CSS Reset ── */
 *,
 *::before,
@@ -25,6 +49,9 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.gap-12 {
+  gap: 12px;
 }
 
 img,
@@ -55,16 +82,28 @@ a {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size: inherit;
   font-weight: inherit;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 

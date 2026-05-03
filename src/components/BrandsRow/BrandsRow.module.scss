@@ -3,12 +3,20 @@
   grid-template-columns: repeat(9, 1fr);
   gap: 10px;
   margin-top: 18px;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .brandItem {
   width: 145px;
   height: 70px;
-  border: 1px solid #E5E7EBf5;
+  border: 1px solid #e5e7ebf5;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -17,10 +25,10 @@
   margin-bottom: 40px;
   cursor: pointer;
   transition: border-color 0.2s ease;
-}
 
-.brandItem:hover {
-  border-color: #1B365D;
+  &:hover {
+    border-color: #1b365d;
+  }
 }
 
 .brandImage {
@@ -28,20 +36,8 @@
   height: 50px;
   object-fit: contain;
   transition: 0.25s ease;
-}
 
-.brandItem:hover .brandImage {
-  transform: scale(1.05);
-}
-
-@media (max-width: 1200px) {
-  .brandsRow {
-    grid-template-columns: repeat(5, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .brandsRow {
-    display: none;
+  .brandItem:hover & {
+    transform: scale(1.05);
   }
 }

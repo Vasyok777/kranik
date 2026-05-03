@@ -1,5 +1,9 @@
 .section {
   width: 100%;
+
+  @media (max-width: 768px) {
+    margin-bottom: 28px;
+  }
 }
 
 .heading {
@@ -14,6 +18,13 @@
     font-weight: 700;
     color: #1b365d;
     line-height: 1.1;
+
+    @media (max-width: 768px) {
+      font-family: Inter, sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: normal;
+    }
   }
 
   a {
@@ -23,12 +34,30 @@
     font-weight: 500;
     line-height: 1;
     margin-top: 5px;
+
+    @media (max-width: 768px) {
+      font-family: Inter, sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: normal;
+      margin-top: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    justify-content: space-between;
+    gap: 0;
+    margin-bottom: 12px;
   }
 }
 
-/* ── ДЕСКТОП: Embla ── */
+/* ── DESKTOP: Embla ── */
 .carouselWrapper {
   position: relative;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .embla {
@@ -41,11 +70,18 @@
 }
 
 .emblaSlide {
-  flex: 0 0 calc(20% - 12.8px); /* рівно 5 карток */
+  flex: 0 0 calc(20% - 12.8px);
   min-width: 0;
+
+  @media (max-width: 1200px) {
+    flex: 0 0 calc(25% - 12px);
+  }
+
+  @media (max-width: 900px) {
+    flex: 0 0 calc(33.333% - 10.667px);
+  }
 }
 
-/* СТРІЛКИ */
 .sliderArrow {
   position: absolute;
   top: 218px;
@@ -65,11 +101,11 @@
   cursor: pointer;
   transition: background 0.2s ease, transform 0.2s ease;
   box-sizing: border-box;
-}
 
-.sliderArrow:hover {
-  background: rgba(242, 243, 245, 0.90);
-  transform: translateY(-50%) scale(1.08);
+  &:hover {
+    background: rgba(242, 243, 245, 0.90);
+    transform: translateY(-50%) scale(1.08);
+  }
 }
 
 .hidden {
@@ -85,9 +121,13 @@
   right: -19px;
 }
 
-/* ── МОБІЛЬНИЙ: Grid ── */
+/* ── MOBILE: Grid ── */
 .mobileGrid {
   display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
 }
 
 .mobileGridInner {
@@ -123,55 +163,4 @@
   border-radius: 80px;
   background: #e7edf4;
   cursor: pointer;
-}
-
-/* ── TABLET ── */
-@media (max-width: 1200px) {
-  .emblaSlide {
-    flex: 0 0 calc(25% - 12px); /* рівно 4 картки */
-  }
-}
-
-@media (max-width: 900px) {
-  .emblaSlide {
-    flex: 0 0 calc(33.333% - 10.667px); /* рівно 3 картки */
-  }
-}
-
-/* ── MOBILE ── */
-@media (max-width: 768px) {
-  .section {
-    margin-bottom: 28px;
-  }
-
-  .heading {
-    justify-content: space-between;
-    gap: 0;
-    margin-bottom: 12px;
-  }
-
-  .heading h2 {
-    color: #1b365d;
-    font-family: Inter, sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-    line-height: normal;
-  }
-
-  .heading a {
-    color: #a60000;
-    font-family: Inter, sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: normal;
-    margin-top: 0;
-  }
-
-  .carouselWrapper {
-    display: none;
-  }
-
-  .mobileGrid {
-    display: block;
-  }
 }

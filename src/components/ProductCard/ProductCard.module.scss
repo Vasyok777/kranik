@@ -11,6 +11,12 @@
   flex-direction: column;
   font-family: "Inter", sans-serif;
   margin-bottom: 40px;
+
+  @media (max-width: 768px) {
+    height: auto;
+    min-height: 320px;
+    margin-bottom: 0;
+  }
 }
 
 .badge {
@@ -31,6 +37,10 @@
   font-weight: 600;
   line-height: 1;
   white-space: nowrap;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .favoriteTop {
@@ -47,13 +57,12 @@
   justify-content: center;
   padding: 0;
   cursor: pointer;
-}
 
-.favoriteTop img,
-.favoriteTop svg {
-  width: 22px;
-  height: 22px;
-  display: block;
+  img, svg {
+    width: 22px;
+    height: 22px;
+    display: block;
+  }
 }
 
 .saleTop {
@@ -73,6 +82,10 @@
   font-size: 12px;
   font-weight: 700;
   line-height: 1;
+
+  @media (max-width: 768px) {
+    top: 14px;
+  }
 }
 
 .imageBlock {
@@ -85,6 +98,13 @@
   justify-content: center;
   padding: 26px 16px 6px;
   box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    height: 180px;
+    min-height: 180px;
+    max-height: 180px;
+    padding: 12px 8px 4px;
+  }
 }
 
 .image {
@@ -93,6 +113,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .productImage {
@@ -109,6 +134,10 @@
   flex-direction: column;
   padding: 0 14px 12px;
   box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    padding: 0 8px 8px;
+  }
 }
 
 .stockRow {
@@ -125,12 +154,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
 
-.stockIcon img {
-  width: 18px;
-  height: 18px;
-  display: block;
+  img {
+    width: 18px;
+    height: 18px;
+    display: block;
+  }
 }
 
 .stockText {
@@ -138,6 +167,10 @@
   font-size: 12px;
   font-weight: 600;
   line-height: 1.2;
+
+  @media (max-width: 768px) {
+    font-size: 11px;
+  }
 }
 
 .title {
@@ -155,6 +188,13 @@
   overflow: hidden;
   text-overflow: ellipsis;
   word-break: break-word;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    min-height: auto;
+    max-height: 36px;
+    margin-bottom: 4px;
+  }
 }
 
 .code {
@@ -164,6 +204,11 @@
   font-weight: 400;
   line-height: 1.25;
   min-height: 15px;
+
+  @media (max-width: 768px) {
+    font-size: 10px;
+    margin-bottom: 4px;
+  }
 }
 
 .priceMetaRow {
@@ -172,6 +217,10 @@
   justify-content: space-between;
   gap: 10px;
   margin-bottom: 14px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 8px;
+  }
 }
 
 .leftPart {
@@ -188,6 +237,11 @@
   text-decoration: line-through;
   text-decoration-thickness: 1px;
   margin-top: 10px;
+
+  @media (max-width: 768px) {
+    font-size: 11px;
+    margin-top: 6px;
+  }
 }
 
 .price {
@@ -195,6 +249,10 @@
   font-size: 20px;
   font-weight: 800;
   line-height: 1;
+
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
 }
 
 .meta {
@@ -202,6 +260,10 @@
   align-items: center;
   gap: 12px;
   transform: translateY(17px);
+
+  @media (max-width: 768px) {
+    transform: translateY(10px);
+  }
 }
 
 .metaItem {
@@ -209,12 +271,17 @@
   align-items: center;
   gap: 4px;
   line-height: 1;
-}
 
-.metaItem img {
-  width: 22px;
-  height: 22px;
-  display: block;
+  img {
+    width: 22px;
+    height: 22px;
+    display: block;
+
+    @media (max-width: 768px) {
+      width: 16px;
+      height: 16px;
+    }
+  }
 }
 
 .ratingText,
@@ -223,6 +290,10 @@
   font-size: 14px;
   font-weight: 600;
   line-height: 1;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 }
 
 .actionsRow {
@@ -231,6 +302,11 @@
   grid-template-columns: minmax(0, 1fr) 50px;
   gap: 12px;
   align-items: center;
+
+  @media (max-width: 768px) {
+    grid-template-columns: minmax(0, 1fr) 38px;
+    gap: 6px;
+  }
 }
 
 .cartButton {
@@ -248,11 +324,19 @@
   transition: 0.2s ease;
   margin-top: 10px;
   margin-bottom: 40px;
-}
 
-.cartButton:hover {
-  background: #229e3f;
-  color: #ffffff;
+  &:hover {
+    background: #229e3f;
+    color: #ffffff;
+  }
+
+  @media (max-width: 768px) {
+    height: 38px;
+    font-size: 13px;
+    margin-top: 6px;
+    margin-bottom: 0;
+    padding: 0 8px;
+  }
 }
 
 .compareButton {
@@ -274,126 +358,30 @@
   padding: 0;
   margin: 10px 0 40px 0;
   cursor: pointer;
-  transition:
-    border-color 0.2s ease,
-    background-color 0.2s ease,
-    transform 0.2s ease;
+  transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
   appearance: none;
   outline: none;
   flex: 0 0 50px;
-}
 
-.compareButton:hover {
-  border-color: #cfd8e6;
-  background: #f9fbff;
-}
-
-.compareButton:active {
-  transform: scale(0.97);
-}
-
-.compareButton img,
-.compareButton svg {
-  width: 20px;
-  height: 20px;
-  min-width: 20px;
-  min-height: 20px;
-  display: block;
-  object-fit: contain;
-}
-
-.activeCompare {
-  border-color: #e30000;
-}
-
-.activeCompare:hover {
-  border-color: #e30000;
-}
-
-@media (max-width: 768px) {
-  .productCard {
-    width: 100%;
-    height: auto;
-    min-height: 320px;
-    margin-bottom: 0;
+  &:hover {
+    border-color: #cfd8e6;
+    background: #f9fbff;
   }
 
-  .badge {
-    display: none;
+  &:active {
+    transform: scale(0.97);
   }
 
-  .saleTop {
-    top: 14px;
+  img, svg {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    min-height: 20px;
+    display: block;
+    object-fit: contain;
   }
 
-  .imageBlock {
-    height: 180px;
-    min-height: 180px;
-    max-height: 180px;
-    padding: 12px 8px 4px;
-  }
-
-  .content {
-    padding: 0 8px 8px;
-  }
-
-  .stockText {
-    font-size: 11px;
-  }
-
-  .title {
-    font-size: 12px;
-    min-height: auto;
-    max-height: 36px;
-    margin-bottom: 4px;
-  }
-
-  .code {
-    font-size: 10px;
-    margin-bottom: 4px;
-  }
-
-  .oldPrice {
-    font-size: 11px;
-    margin-top: 6px;
-  }
-
-  .price {
-    font-size: 15px;
-  }
-
-  .priceMetaRow {
-    margin-bottom: 8px;
-  }
-
-  .meta {
-    transform: translateY(10px);
-  }
-
-  .metaItem img {
-    width: 16px;
-    height: 16px;
-  }
-
-  .ratingText,
-  .reviewText {
-    font-size: 12px;
-  }
-
-  .actionsRow {
-    grid-template-columns: minmax(0, 1fr) 38px;
-    gap: 6px;
-  }
-
-  .cartButton {
-    height: 38px;
-    font-size: 13px;
-    margin-top: 6px;
-    margin-bottom: 0;
-    padding: 0 8px;
-  }
-
-  .compareButton {
+  @media (max-width: 768px) {
     width: 38px;
     height: 38px;
     min-width: 38px;
@@ -402,13 +390,20 @@
     max-height: 38px;
     flex: 0 0 38px;
     margin: 6px 0 0 0;
-  }
 
-  .compareButton img,
-  .compareButton svg {
-    width: 16px;
-    height: 16px;
-    min-width: 16px;
-    min-height: 16px;
+    img, svg {
+      width: 16px;
+      height: 16px;
+      min-width: 16px;
+      min-height: 16px;
+    }
+  }
+}
+
+.activeCompare {
+  border-color: #e30000;
+
+  &:hover {
+    border-color: #e30000;
   }
 }

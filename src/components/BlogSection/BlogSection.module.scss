@@ -1,5 +1,9 @@
 .section {
   margin-top: 0;
+
+  @media (max-width: 768px) {
+    margin-bottom: 28px;
+  }
 }
 
 .heading {
@@ -7,13 +11,31 @@
   align-items: center;
   gap: 12px;
   margin-bottom: 20px;
-}
 
-.heading h2 {
-  margin: 0;
-  font-size: 32px;
-  font-weight: 700;
-  color: #23406a;
+  h2 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+    color: #23406a;
+
+    @media (max-width: 1200px) {
+      font-size: 26px;
+    }
+
+    @media (max-width: 768px) {
+      color: #1b365d;
+      font-family: Inter, sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: normal;
+    }
+  }
+
+  @media (max-width: 768px) {
+    justify-content: space-between;
+    gap: 0;
+    margin-bottom: 12px;
+  }
 }
 
 .moreLink {
@@ -24,12 +46,29 @@
   color: #a60000;
   font-size: 14px;
   text-decoration: none;
+
+  @media (max-width: 768px) {
+    color: #a60000;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 0;
+  }
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .card {
@@ -43,10 +82,18 @@
   text-decoration: none;
   color: inherit;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  min-width: 300px;
 
   &:hover {
     border-color: #cfd8e6;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  }
+
+  @media (max-width: 768px) {
+    flex: 0 0 100%;
+    min-width: 100%;
+    scroll-snap-align: start;
+    border-radius: 16px;
   }
 }
 
@@ -61,6 +108,11 @@
 
   img {
     object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    height: 200px;
   }
 }
 
@@ -94,17 +146,20 @@
   font-size: 18px;
   font-weight: 700;
   line-height: 1.35;
-
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-
   overflow: hidden;
   text-overflow: ellipsis;
   word-break: break-word;
-
   min-height: calc(1.35em * 2);
   max-height: calc(1.35em * 2);
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    min-height: auto;
+    max-height: none;
+  }
 }
 
 .description {
@@ -112,15 +167,12 @@
   color: #6b7b92;
   font-size: 14px;
   line-height: 1.5;
-
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-
   overflow: hidden;
   text-overflow: ellipsis;
   word-break: break-word;
-
   min-height: calc(1.5em * 2);
   max-height: calc(1.5em * 2);
 }
@@ -168,29 +220,53 @@
   position: relative;
 }
 
-/* СЛАЙДЕР */
 .slider {
   display: flex;
   gap: 16px;
   overflow-x: auto;
   scroll-behavior: smooth;
   scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    scroll-snap-type: x mandatory;
+    gap: 0;
+  }
 }
 
-.slider::-webkit-scrollbar {
-  display: none;
-}
-
-.card {
-  min-width: 300px;
-}
-
-/* DOTS — тільки мобільний */
 .dots {
   display: none;
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin-top: 16px;
+    height: 8px;
+  }
 }
 
-/* СТРІЛКИ — 1в1 як Hero */
+.dot {
+  width: 6px;
+  height: 6px;
+  border: none;
+  border-radius: 50%;
+  background: #d9d9d9;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.2s ease, width 0.2s ease, height 0.2s ease;
+}
+
+.activeDot {
+  width: 8px;
+  height: 8px;
+  background: #0f488f;
+}
+
 .blogArrow {
   position: absolute;
   top: 50%;
@@ -206,118 +282,31 @@
   cursor: pointer;
   z-index: 3;
   box-shadow: 0 4px 14px rgba(21, 52, 104, 0.08);
+
+  span {
+    color: #47618f;
+    font-size: 22px;
+    line-height: 1;
+    margin-top: -2px;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
-.blogArrow span {
-  color: #47618f;
-  font-size: 22px;
-  line-height: 1;
-  margin-top: -2px;
-}
-
-/* позиції */
 .left {
   left: -20px;
+
+  @media (max-width: 768px) {
+    left: 8px;
+  }
 }
 
 .right {
   right: -20px;
-}
 
-@media (max-width: 1200px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .heading h2 {
-    font-size: 26px;
-  }
-}
-
-@media (max-width: 768px) {
-  .section {
-    margin-bottom: 28px;
-  }
-
-  .heading {
-    justify-content: space-between;
-    gap: 0;
-    margin-bottom: 12px;
-  }
-
-  .heading h2 {
-    color: #1b365d;
-    font-family: Inter, sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-  }
-
-  .moreLink {
-    color: #a60000;
-    font-family: Inter, sans-serif;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    margin-top: 0;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .blogArrow {
-    display: none;
-  }
-
-  .slider {
-    scroll-snap-type: x mandatory;
-    gap: 0;
-  }
-
-  .card {
-    flex: 0 0 100%;
-    min-width: 100%;
-    scroll-snap-align: start;
-    border-radius: 16px;
-  }
-
-  .image {
-    max-width: 100%;
-    height: 200px;
-  }
-
-  .title {
-    font-size: 16px;
-    min-height: auto;
-    max-height: none;
-  }
-
-  .dots {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
-    margin-top: 16px;
-    height: 8px;
-  }
-
-  .dot {
-    width: 6px;
-    height: 6px;
-    border: none;
-    border-radius: 50%;
-    background: #d9d9d9;
-    padding: 0;
-    cursor: pointer;
-    transition: background 0.2s ease, width 0.2s ease, height 0.2s ease;
-  }
-
-  .activeDot {
-    width: 8px;
-    height: 8px;
-    background: #0f488f;
+  @media (max-width: 768px) {
+    right: 8px;
   }
 }
