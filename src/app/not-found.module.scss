@@ -81,7 +81,7 @@
   text-decoration: none;
   transition: background 0.2s ease;
 
-  &:hover {
+  @include hover {
     background: #0d3a72;
   }
 }
@@ -107,7 +107,7 @@
   text-decoration: none;
   transition: background 0.2s ease;
 
-  &:hover {
+  @include hover {
     background: #f4f6fa;
   }
 }

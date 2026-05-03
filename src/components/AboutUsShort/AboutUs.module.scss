@@ -97,7 +97,7 @@
   cursor: pointer;
   transition: background 0.2s ease, box-shadow 0.2s ease;
 
-  &:hover {
+  @include hover {
     background: #31aa50;
     box-shadow: 0 6px 18px rgba(57, 184, 90, 0.18);
   }

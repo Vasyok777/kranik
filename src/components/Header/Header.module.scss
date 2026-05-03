@@ -88,7 +88,7 @@
   white-space: nowrap;
   transition: color 0.2s ease;
 
-  &:hover {
+  @include hover {
     color: #f9691b;
   }
 }
@@ -108,7 +108,7 @@
   cursor: pointer;
   transition: color 0.2s ease;
 
-  &:hover {
+  @include hover {
     color: #f9691b;
   }
 }
@@ -171,7 +171,7 @@
   text-decoration: none;
   white-space: nowrap;
 
-  &:hover {
+  @include hover {
     color: #f9691b;
   }
 }
@@ -199,7 +199,7 @@
   line-height: 1;
   cursor: pointer;
 
-  &:hover {
+  @include hover {
     color: #f9691b;
   }
 }
@@ -246,7 +246,7 @@
   font-size: 14px;
   cursor: pointer;
 
-  &:hover {
+  @include hover {
     color: #f9691b;
     background: #f8fafc;
   }
@@ -449,7 +449,7 @@
   cursor: pointer;
   font-family: 'Inter', sans-serif;
 
-  &:hover {
+  @include hover {
     color: #f9691b;
   }
 }
@@ -585,7 +585,7 @@
     margin-top: 6px;
   }
 
-  &:hover {
+  @include hover {
     background: #f4f7fb;
   }
 }
@@ -636,7 +636,7 @@
   font-size: 14px;
   text-decoration: none;
 
-  &:hover {
+  @include hover {
     color: #f9691b;
   }
 }

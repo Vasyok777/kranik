@@ -102,7 +102,7 @@
   transition: background 0.2s ease, transform 0.2s ease;
   box-sizing: border-box;
 
-  &:hover {
+  @include hover {
     background: rgba(242, 243, 245, 0.90);
     transform: translateY(-50%) scale(1.08);
   }

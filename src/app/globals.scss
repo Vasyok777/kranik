@@ -1,3 +1,12 @@
+/* ── Hover mixin — тільки для пристроїв з мишею ── */
+@mixin hover {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
 /* ── CSS Variables ── */
 :root {
   /* Primary */
@@ -37,6 +46,7 @@
 html {
   -webkit-text-size-adjust: 100%;
   tab-size: 4;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html,

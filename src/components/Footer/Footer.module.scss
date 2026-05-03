@@ -148,7 +148,7 @@
     flex-shrink: 0;
   }
 
-  &:hover {
+  @include hover {
     border-color: rgba(255, 255, 255, 0.6);
     background: rgba(255, 255, 255, 0.08);
   }
@@ -185,7 +185,7 @@
     font-size: 14px;
   }
 
-  &:hover {
+  @include hover {
     opacity: 0.75;
   }
 }
@@ -215,7 +215,7 @@
     flex-shrink: 0;
   }
 
-  &:hover {
+  @include hover {
     opacity: 0.75;
   }
 }

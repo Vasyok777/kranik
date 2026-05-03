@@ -325,7 +325,7 @@
   margin-top: 10px;
   margin-bottom: 40px;
 
-  &:hover {
+  @include hover {
     background: #229e3f;
     color: #ffffff;
   }
@@ -363,7 +363,7 @@
   outline: none;
   flex: 0 0 50px;
 
-  &:hover {
+  @include hover {
     border-color: #cfd8e6;
     background: #f9fbff;
   }
@@ -403,7 +403,7 @@
 .activeCompare {
   border-color: #e30000;
 
-  &:hover {
+  @include hover {
     border-color: #e30000;
   }
 }
