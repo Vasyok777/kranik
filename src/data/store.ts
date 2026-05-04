@@ -32,6 +32,45 @@ export const brands = [
   'franke.svg',
 ];
 
+export type Brand = {
+  name: string;
+  slug: string;
+  logo?: string;
+};
+
+export const brandsList: Brand[] = [
+  { name: 'Alveus', slug: 'alveus' },
+  { name: 'AM.PM', slug: 'ampm' },
+  { name: 'Axor', slug: 'axor' },
+  { name: 'Blanco', slug: 'blanco', logo: '/assets/brands/blanco.svg' },
+  { name: 'Cersanit', slug: 'cersanit' },
+  { name: 'Chaffoteaux', slug: 'chaffoteaux' },
+  { name: 'Damixa', slug: 'damixa' },
+  { name: 'Duravit', slug: 'duravit' },
+  { name: 'Elita', slug: 'elita' },
+  { name: 'Franke', slug: 'franke', logo: '/assets/brands/franke.svg' },
+  { name: 'Geberit', slug: 'geberit' },
+  { name: 'Grohe', slug: 'grohe', logo: '/assets/brands/grohe.svg' },
+  { name: 'Hansgrohe', slug: 'hansgrohe', logo: '/assets/brands/hansgrohe.svg' },
+  { name: 'Ideal Standard', slug: 'ideal-standard' },
+  { name: 'Jacob Delafon', slug: 'jacob-delafon' },
+  { name: 'Kermi', slug: 'kermi' },
+  { name: 'Kohler', slug: 'kohler', logo: '/assets/brands/kohler.svg' },
+  { name: 'Laufen', slug: 'laufen' },
+  { name: 'Moen', slug: 'moen' },
+  { name: 'Novell', slug: 'novell' },
+  { name: 'Oras', slug: 'oras', logo: '/assets/brands/oras.svg' },
+  { name: 'Purmo', slug: 'purmo' },
+  { name: 'Ravak', slug: 'ravak' },
+  { name: 'Roca', slug: 'roca', logo: '/assets/brands/roca.svg' },
+  { name: 'Santek', slug: 'santek' },
+  { name: 'Teka', slug: 'teka', logo: '/assets/brands/teka.svg' },
+  { name: 'Uponor', slug: 'uponor' },
+  { name: 'VitrA', slug: 'vitra', logo: '/assets/brands/vitra.svg' },
+  { name: 'Wasser', slug: 'wasser' },
+  { name: 'Zehnder', slug: 'zehnder' },
+];
+
 export const categories = [
   'Всі товари',
   'Товари зі знижками',
