@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useEffect, useState, useCallback } from 'react';
+import { useRef, useEffect, useState, useCallback, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -14,7 +14,7 @@ import styles from './page.module.scss';
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const MOBILE_PER_PAGE = 15;
 
-export default function BrandsPage() {
+function BrandsContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -162,5 +162,13 @@ export default function BrandsPage() {
 
       <Footer />
     </main>
+  );
+}
+
+export default function BrandsPage() {
+  return (
+    <Suspense>
+      <BrandsContent />
+    </Suspense>
   );
 }
