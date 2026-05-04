@@ -308,9 +308,9 @@ export default function Header({
 
                       <div className={styles.catalogContent}>
                         <div className={styles.catalogGrid}>
-                          {catalogGroups.map(group => (
+                          {catalogGroups.map((group, i) => (
                             <div
-                              key={`${group.title}-${group.links[0]}`}
+                              key={`${group.title}-${i}`}
                               className={styles.catalogCard}
                             >
                               <h4 className={styles.catalogCardTitle}>{group.title}</h4>

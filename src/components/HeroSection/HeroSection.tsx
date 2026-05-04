@@ -60,13 +60,9 @@ const categories = [
 ];
 
 const banners = [
-  { id: 1, image: '/images/hero/banner-1.jpg', href: 'https://example.com/banner-1' },
-  { id: 2, image: '/images/hero/banner-2.jpg', href: 'https://example.com/banner-2' },
-  { id: 3, image: '/images/hero/banner-3.jpg', href: 'https://example.com/banner-3' },
-  { id: 4, image: '/images/hero/banner-4.jpg', href: 'https://example.com/banner-4' },
-  { id: 5, image: '/images/hero/banner-5.jpg', href: 'https://example.com/banner-5' },
-  { id: 6, image: '/images/hero/banner-6.jpg', href: 'https://example.com/banner-6' },
-  { id: 7, image: '/images/hero/banner-7.jpg', href: 'https://example.com/banner-7' },
+  { id: 1, image: '/images/hero/banner-1.jpg', href: '/' },
+  { id: 2, image: '/images/hero/banner-2.jpg', href: '/' },
+  { id: 3, image: '/images/hero/banner-3.jpg', href: '/' },
 ];
 
 export default function HeroSection() {
