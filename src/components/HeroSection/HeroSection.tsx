@@ -69,7 +69,8 @@ export default function HeroSection() {
   const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
   const [activeBanner, setActiveBanner] = useState(0);
 
-  const currentBanner = useMemo(() => banners[activeBanner], [activeBanner]);
+  const safeIndex = activeBanner % banners.length;
+  const currentBanner = useMemo(() => banners[safeIndex], [safeIndex]);
 
   useEffect(() => {
     const timer = setInterval(() => {

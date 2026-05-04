@@ -94,6 +94,7 @@ export default function Footer() {
               <Image
                 src="/assets/logo-white.svg"
                 alt="Kranik"
+                style={{ height: 'auto' }}
                 width={326}
                 height={90}
               />
@@ -145,6 +146,7 @@ export default function Footer() {
               <Image
                 src="/assets/logo-white.svg"
                 alt="Kranik"
+                style={{ height: 'auto' }}
                 width={166}
                 height={46}
               />
