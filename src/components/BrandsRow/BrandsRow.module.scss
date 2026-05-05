@@ -1,12 +1,8 @@
 .brandsRow {
-  display: grid;
-  grid-template-columns: repeat(9, 1fr);
+  display: flex;
+  flex-wrap: nowrap;
   gap: 10px;
   margin-top: 18px;
-
-  @media (max-width: 1200px) {
-    grid-template-columns: repeat(5, 1fr);
-  }
 
   @media (max-width: 768px) {
     display: none;
@@ -14,7 +10,8 @@
 }
 
 .brandItem {
-  width: 145px;
+  flex: 1 1 0;
+  min-width: 0;
   height: 70px;
   border: 1px solid #e5e7ebf5;
   border-radius: 12px;

@@ -28,8 +28,6 @@ export const brands = [
   'grohe.svg',
   'hansgrohe.svg',
   'teka.svg',
-  'blanco.svg',
-  'franke.svg',
 ];
 
 export type Brand = {
