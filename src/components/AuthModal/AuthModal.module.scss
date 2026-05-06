@@ -1,24 +1,35 @@
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(34, 42, 56, 0.5);
   z-index: 999;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
+  background: rgba(34, 42, 56, 0.5);
   box-sizing: border-box;
 }
 
 .modal {
   width: 100%;
   max-width: 404px;
+  max-height: 95vh;
+  overflow-y: auto;
   background: #ffffff;
   border-radius: 16px;
   padding: 44px 36px 34px;
   box-sizing: border-box;
   box-shadow: 0 18px 45px rgba(15, 39, 80, 0.16);
   font-family: 'Inter', sans-serif;
+}
+
+.modal::-webkit-scrollbar {
+  width: 4px;
+}
+
+.modal::-webkit-scrollbar-thumb {
+  background: #d9e3ef;
+  border-radius: 10px;
 }
 
 .tabs {
@@ -32,12 +43,12 @@
   border: none;
   background: transparent;
   padding: 0;
+  color: #10488e;
   font-size: 18px;
   font-weight: 600;
   line-height: 1;
-  color: #10488E;
-  cursor: pointer;
   text-align: center;
+  cursor: pointer;
   font-family: 'Inter', sans-serif;
 }
 
@@ -46,7 +57,7 @@
 }
 
 .tabRegisterActive {
-  color: #F9691B;
+  color: #f9691b;
 }
 
 .lines {
@@ -59,19 +70,18 @@
   display: block;
   width: 100%;
   height: 2px;
-  background: #d7e3f1;
 }
 
 .lineOrange {
-  background: #F9691B;
+  background: #f9691b;
 }
 
 .lineBlue {
-  background: #F9691B;
+  background: #f9691b;
 }
 
 .lineGray {
-  background: #10488E;
+  background: #10488e;
 }
 
 .form {
@@ -81,7 +91,7 @@
 
 .label {
   margin: 0 0 10px;
-  color: #6C6E70;
+  color: #6c6e70;
   font-size: 15px;
   font-weight: 400;
   line-height: 1.25;
@@ -93,14 +103,14 @@
   border: 2px solid #d9e3ef;
   border-radius: 24px;
   padding: 0 18px;
+  margin: 0 0 12px;
   box-sizing: border-box;
   outline: none;
   background: #ffffff;
   color: #1b365d;
   font-size: 15px;
   font-family: 'Inter', sans-serif;
-  margin-bottom: 12px;
-  transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease, color 0.2s ease;
 }
 
 .input::placeholder {
@@ -114,7 +124,7 @@
 .inputError {
   border-color: #ef4d4d;
   color: #ef4d4d;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .inputError::placeholder {
@@ -122,10 +132,54 @@
 }
 
 .errorText {
-  margin: 0 0 16px;
+  margin: -2px 0 12px;
   color: #ef4d4d;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.25;
+  font-weight: 400;
+}
+
+.passwordWrap {
+  position: relative;
+  width: 100%;
+  height: 44px;
+  margin: 0 0 12px;
+}
+
+.passwordWrap .input {
+  margin-bottom: 0;
+}
+
+.passwordInput {
+  padding-right: 54px;
+}
+
+.passwordErrorWrap {
+  margin-bottom: 6px;
+}
+
+.eyeButton {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eyeIcon {
+  width: 18px;
+  height: 18px;
+  display: block;
+  object-fit: contain;
 }
 
 .forgotButton {
@@ -149,19 +203,28 @@
   border-radius: 26px;
   background: #e9eff9;
   color: #2c4b7f;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 00;
   line-height: 1;
   cursor: pointer;
   font-family: 'Inter', sans-serif;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
-.submitButton:hover {
-  background: #dfe8f5;
+.submitButtonActive {
+  background: #18549d;
+  color: #ffffff;
+}
+
+.submitButtonActive:hover {
+  background: #124784;
 }
 
 @media (max-width: 480px) {
+  .overlay {
+    padding: 14px;
+  }
+
   .modal {
     max-width: 100%;
     padding: 28px 20px 24px;
@@ -181,8 +244,76 @@
     font-size: 14px;
   }
 
+  .passwordWrap {
+    height: 42px;
+  }
+
   .submitButton {
     height: 46px;
     font-size: 16px;
   }
+  .forgotForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.forgotTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 42px;
+}
+
+.forgotTitle {
+  margin: 0;
+  color: #1b365d;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.closeButton {
+  width: 56px;
+  height: 56px;
+  border: none;
+  border-radius: 50%;
+  background: #f5f7fa;
+  color: #1b365d;
+  font-size: 42px;
+  font-weight: 300;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.forgotText {
+  margin: 18px 0 32px;
+  color: #6f7787;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+@media (max-width: 480px) {
+  .forgotTop {
+    margin-bottom: 28px;
+  }
+
+  .forgotTitle {
+    font-size: 24px;
+  }
+
+  .closeButton {
+    width: 46px;
+    height: 46px;
+    font-size: 34px;
+  }
+
+  .forgotText {
+    font-size: 16px;
+    margin: 16px 0 26px;
+  }
+}
 }
