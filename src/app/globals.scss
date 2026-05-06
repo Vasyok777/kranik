@@ -64,6 +64,13 @@ body {
   gap: 12px;
 }
 
+*::-webkit-scrollbar-button {
+  display: none !important;
+  height: 0 !important;
+  width: 0 !important;
+  background: transparent !important;
+}
+
 img,
 video,
 svg,

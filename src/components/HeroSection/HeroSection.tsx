@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useMemo, useState } from 'react';
+import ScrollArea from '@/src/components/ScrollArea/ScrollArea';
 import styles from './HeroSection.module.scss';
 
 const categories = [
@@ -90,10 +91,8 @@ export default function HeroSection() {
   return (
     <section className={`container ${styles.heroSection}`}>
       <aside className={styles.categoriesPanel}>
-        <div
-          className={styles.categoriesScroll}
-          onMouseLeave={() => setHoveredCategory(null)}
-        >
+        <ScrollArea>
+          <div onMouseLeave={() => setHoveredCategory(null)}>
           <ul className={styles.categoriesList}>
             {categories.map((item) => {
               const isHovered = hoveredCategory === item.title;
@@ -122,6 +121,7 @@ export default function HeroSection() {
             })}
           </ul>
         </div>
+        </ScrollArea>
       </aside>
 
       <div className={styles.heroBannerWrap}>
@@ -158,6 +158,7 @@ export default function HeroSection() {
           >
             <span>›</span>
           </button>
+
         </div>
 
         <div className={styles.heroDots}>

@@ -1,43 +1,42 @@
 .heroSection {
   margin-top: 18px;
   display: grid;
-  grid-template-columns: 340px 1fr;
+  grid-template-columns: 343px 1fr;
   gap: 16px;
   align-items: start;
+  overflow: visible;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: 280px 1fr;
+    gap: 12px;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    margin-top: 12px;
+    gap: 0;
+  }
 }
 
-/* ВАЖЛИВО:
-   висота лівого меню = висота банера
-   без dots */
 .categoriesPanel {
+  display: flex;
+  width: 343px;
+  padding: 16px 16px 16px 12px;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 12px;
+  background: #f8fafc;
+  box-sizing: border-box;
   height: 400px;
-  box-sizing: border-box;
-  padding-right: 8px;
   overflow: hidden;
-}
 
-.categoriesScroll {
-  height: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding-right: 10px;
-  box-sizing: border-box;
-  scrollbar-width: thin;
-  scrollbar-color: #1b365d #eef1f5;
-}
+  @media (max-width: 1200px) {
+    height: 340px;
+  }
 
-.categoriesScroll::-webkit-scrollbar {
-  width: 8px;
-}
-
-.categoriesScroll::-webkit-scrollbar-track {
-  background: #eef1f5;
-  border-radius: 20px;
-}
-
-.categoriesScroll::-webkit-scrollbar-thumb {
-  background: #1b365d;
-  border-radius: 20px;
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .categoriesList {
@@ -47,20 +46,16 @@
 }
 
 .categoryItem {
-  margin-bottom: 6px;
-}
-
-.categoryItem:last-child {
   margin-bottom: 0;
 }
 
 .categoryLink {
   width: 100%;
-  min-height: 52px;
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 0 16px 0 12px;
+  height: 50px;
+  padding: 0 20px;
   border-radius: 999px;
   text-decoration: none;
   box-sizing: border-box;
@@ -69,7 +64,12 @@
 }
 
 .hovered {
-  background: #eef1f5;
+  background: #0f488f;
+  border-radius: 100px;
+
+  .categoryText {
+    color: #ffffff;
+  }
 }
 
 .iconWrap {
@@ -95,25 +95,35 @@
   line-height: 1.15;
 }
 
-/* ПРАВИЙ БЛОК = банер + dots */
 .heroBannerWrap {
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  overflow: visible;
 }
 
 .heroBanner {
   position: relative;
+  overflow: visible;
 }
 
 .heroContent {
   position: relative;
   display: block;
-  height: 400px;
+  height: 370px;
   overflow: hidden;
   border-radius: 16px;
   text-decoration: none;
   background: #f3f4f8;
+
+  @media (max-width: 1200px) {
+    height: 340px;
+  }
+
+  @media (max-width: 768px) {
+    height: 210px;
+    border-radius: 12px;
+  }
 }
 
 .heroImageWrap {
@@ -136,114 +146,95 @@
   width: 42px;
   height: 42px;
   border: none;
-  border-radius: 50%;
-  background: #f4f6fa;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   z-index: 3;
-  box-shadow: 0 4px 14px rgba(21, 52, 104, 0.08);
-}
+  transition: background 0.2s ease;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
 
-.heroArrow span {
-  color: #47618f;
-  font-size: 22px;
-  line-height: 1;
-  display: block;
-  margin-top: -2px;
+  span {
+    color: #1b365d;
+    font-size: 22px;
+    line-height: 1;
+    display: block;
+    margin-top: -2px;
+  }
+
+  @include hover {
+    background: rgba(255, 255, 255, 0.85);
+    transform: translateY(-50%) scale(1.08);
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .left {
-  left: 14px;
+  left: -13px;
 }
 
 .right {
-  right: 14px;
+  right: -13px;
 }
 
-/* dots живуть ОКРЕМО під банером */
 .heroDots {
   margin-top: 12px;
   height: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-}
+  gap: 8px;
 
-.dot {
-  width: 8px;
-  height: 8px;
-  border: none;
-  border-radius: 50%;
-  background: #9d9d9d;
-  padding: 0;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.activeDot {
-  background: #1653a5;
-}
-
-.mobileCatalogBar {
-  display: none;
-}
-
-@media (max-width: 1200px) {
-  .heroSection {
-    grid-template-columns: 280px 1fr;
-    gap: 12px;
-  }
-
-  .categoriesPanel {
-    height: 340px;
-  }
-
-  .heroContent {
-    height: 340px;
-  }
-}
-
-@media (max-width: 768px) {
-  .heroSection {
-    grid-template-columns: 1fr;
-    margin-top: 12px;
-    gap: 0;
-  }
-
-  .categoriesPanel {
-    display: none;
-  }
-
-  .heroContent {
-    height: 210px;
-    border-radius: 12px;
-  }
-
-  .heroArrow {
-    display: none;
-  }
-
-  .heroDots {
+  @media (max-width: 768px) {
     margin-top: 10px;
     gap: 6px;
   }
+}
 
-  .dot {
+.dot {
+  -webkit-appearance: none;
+  appearance: none;
+  flex-shrink: 0;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: #9d9d9d;
+  cursor: pointer;
+  width: 8px;
+  height: 8px;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+
+  @media (max-width: 768px) {
     width: 6px;
     height: 6px;
     background: #d9d9d9;
   }
+}
 
-  .activeDot {
+.activeDot {
+  background: #1653a5;
+
+  @media (max-width: 768px) {
     width: 8px;
     height: 8px;
     background: #0f488f;
   }
+}
 
-  .mobileCatalogBar {
+.mobileCatalogBar {
+  display: none;
+
+  @media (max-width: 768px) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -259,7 +250,6 @@
     background: #1b365d;
     color: #ffffff;
     font-size: 15px;
-    font-style: normal;
     font-weight: 500;
     line-height: normal;
     cursor: pointer;

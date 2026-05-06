@@ -1,0 +1,35 @@
+.root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.viewport {
+  width: 100%;
+  height: 100%;
+  padding-right: 12px;
+  box-sizing: border-box;
+}
+
+.scrollbar {
+  display: flex;
+  user-select: none;
+  touch-action: none;
+  width: 4px;
+  padding: 0;
+  margin-left: 8px;
+  background: transparent;
+}
+
+.thumb {
+  flex: 1;
+  background: #1b365d;
+  border-radius: 100px;
+  position: relative;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: #0f488f;
+    border-radius: 100px;
+  }
+}
